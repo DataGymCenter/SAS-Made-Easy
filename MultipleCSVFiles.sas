@@ -9,7 +9,7 @@ dm'log;clear;output;clear;';
 	out=CSVDat dbms=csv replace; 
 run;
 
-* Combine all imported data into a single data ;
+* Combine all imported data into a single data on the go ;
 	proc append base=all_CSV data=CSVDat force; quit;
 	
 %mend;
@@ -20,8 +20,11 @@ run;
 %import_csv(Olympics5);
 
 proc print data=all_CSV; run;
+/* Print data. If data is large, you may need to print only a small part. 
+In that case, use (obs=N), where N is the number of observations you want to print
+E.g., (obs=10) prints out the first 10 observations */;
 
-proc contents data=all_CSV varnum; run;
+proc contents data=all_CSV varnum; run; * Basic checks for data type etc.;
 
 
 
