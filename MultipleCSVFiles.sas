@@ -1,4 +1,4 @@
-dm'log;clear;output;clear;';
+dm'log;clear;output;clear;'; * This code clears the contents of the log and output windows;
 
 *---- Importing Multiple CSV Files into SAS ----;
 %Let wk_dir = /folders/myfolders/SASTuts/Olympics/;
@@ -20,7 +20,7 @@ run;
 %import_csv(Olympics5);
 
 proc print data=all_CSV; run;
-/* Print data. If data is large, you may need to print only a few rows. In that case, use (obs=N), where N is the number of observations you want to print 
+/* Print data. If data your is large, you may need to print only a few rows. In that case, use (obs=N), where N is the number of observations you want to print 
 E.g., (obs=10) prints out the first 10 observations */;
 proc print data=all_CSV (obs=10); run; * prints out the first 10 observations ;
-proc contents data=all_CSV varnum; run; * Basic checks for data type etc.;
+proc contents data=all_CSV varnum; run; * Basic checks for data type etc., similar to 'str', 'glimpse' in R;
