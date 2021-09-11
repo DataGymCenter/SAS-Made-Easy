@@ -23,4 +23,4 @@ proc print data=all_CSV; run;
 /* Print data. If data your is large, you may need to print only a few rows. In that case, use (obs=N), where N is the number of observations you want to print 
 E.g., (obs=10) prints out the first 10 observations */;
 proc print data=all_CSV (obs=10); run; * prints out the first 10 observations ;
-proc contents data=all_CSV varnum; run; * Basic checks for data type etc., similar to 'str', 'glimpse' in R;
+proc contents data=all_CSV varnum; run; * Basic checks for data type etc., similar to 'str(all_CSV)', 'glimpse(all_CSV)' in R;
