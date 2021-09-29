@@ -15,10 +15,10 @@ proc print data=carsy.carz(obs=15);run;
 proc import 
 	datafile="&path.cars11.xlsx" 	* Simply change the file to 'xlsx' here, and ; 
         out=carsy.carz_XL
-        dbms=xlsx * Here!. ;
+        dbms=xlsx 			* Here!. ;
         replace;
      	getnames=Yes;
-	range="subset_dat"; 		* Specify the sheet name or the data range name. ;
+	range="subset_dat"; 		* Specify the sheet name or the data range name already defined in the Excel file. ;
 run;
 
 /* Print out the data */
