@@ -1,6 +1,6 @@
 /* Import data from CSV file */
 proc import * 'proc' is short for procedure. This statement calls the import procedure. To execute correctly, the this step requires some key information ;
-	datafile="&path.&dat1..csv"  	* From where am I getting the data? ;
+	datafile="&path.&dat1..csv"  	* From where am I getting the data? 'path' and 'dat1' are placeholders defined in the '00_BasicsInfo.sas' file. ;
         out=carsy.carz 			* What name should I call the data (for use within SAS) once imported? ;
         dbms=csv 			* What's the file type? ;
         replace; 			* Replace data with the current if data with the same name exists. ;
