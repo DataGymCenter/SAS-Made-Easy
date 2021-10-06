@@ -1,6 +1,8 @@
 * Decluttering work environment by deleting all temporary files ;
-dm 'log;clear;output;clear;odsresults;clear;macro;clear'; * 'dm' means display manager;
-proc datasets library=work kill memtype=data nolist;quit; * You do not need to run this everytime to avoid deleting your active data in the 'work' library/folder ;
+dm 'log;clear;output;clear;odsresults;clear;macro;clear'; 
+* 'dm' means display manager;
+proc datasets library=work kill memtype=data nolist;quit; 
+* You do not need to run this everytime to avoid deleting your active data in the 'work' library/folder ;
 options notes source errors=20 nocenter;
 
 *== Path or directory (folder) containing the data to import ==;
