@@ -19,6 +19,6 @@ run;
 %import_xl(Olympics4);
 %import_xl(Olympics5);
 
-proc print data=all_xl; run;
+proc print data=all_xl (obs=5); run; *'obs=5' prints the first 5 rows of the data.;
 
 proc contents data=all_xl varnum; run;
